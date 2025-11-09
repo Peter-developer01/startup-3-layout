@@ -1,0 +1,197 @@
+/* || Global styles */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-dark: rgb(47, 24, 147);
+    --background-dark-50: rgba(47, 24, 147, 0.5);
+    --color-white: rgba(255, 255, 255, 1);
+    --action-secondary: rgba(72, 43, 231, 1);
+    --font: "DM Sans", Roboto, sans-serif;
+    /* animate.css variable settings */
+    --animate-duration: 1s;
+    --animate-delay: 0.5s;
+}
+
+html {
+    /* The font size is 10 px to make it easier to make the layout responsive.  */
+    font-size: 10px;
+}
+
+body {
+    font-family: var(--font);
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: var(--color-white);
+    scroll-behavior: smooth;
+}
+
+section {
+    /* for some reason the margins do not work correctly without this */
+    display: flow-root;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    letter-spacing: 0;
+}
+
+.btn {
+    border-radius: 1.6rem;
+    padding: 1.6rem 2.4rem;
+    min-width: 23.0rem;
+    height: 6.0rem;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+.btn:active {
+    filter: brightness(0.9);
+}
+
+.btn-secondary {
+    background-color: var(--action-secondary);
+    color: var(--color-white);
+}
+
+/* || Hero section */
+#hero .navbar a {
+    display: inline-block;
+}
+
+#hero {
+    position: relative;
+    min-height: 850px;
+    height: 100vh;
+    background-color: var(--background-dark-50);
+    text-align: center;
+}
+
+#hero .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#hero .navbar {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 4.0rem;
+    align-items: center;
+    margin-top: 8.5rem;
+}
+
+#hero .hero-name {
+    font-size: 2.4rem;
+    margin-top: 13.6rem;
+    letter-spacing: -0.29px;
+}
+
+
+#hero .swiper {
+    /* Don't use rem here. The height is fixed. */
+    height: 316px;
+    margin-top: 2.88rem;
+}
+
+#hero .swiper-slide-header {
+    line-height: 8.6rem;
+    font-size: 7.2rem;
+    letter-spacing: -0.1rem;
+    margin: 0;
+}
+
+#hero .swiper-slide-paragraph {
+    display: inline-block;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    max-width: 73.6rem;
+    margin: 0;
+    margin-top: 2.72rem;
+}
+
+#hero .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+#hero .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: var(--color-white);
+}
+
+/*
+ * Either I didn't see it or Swiper has no such feature,
+ * but I could not make the navigation buttons into Font Awesome icons.
+ * So I use CSS
+ */
+
+#hero .swiper-button-prev,
+#hero .swiper-button-next {
+    /* from .fa-classic */
+    --fa-family: var(--fa-family-classic);
+    --_fa-family: var(--fa-family, var(--fa-style-family, "Font Awesome 7 Free"));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: var(--fa-display, inline-block);
+    font-family: var(--_fa-family);
+    font-feature-settings: normal;
+    font-style: normal;
+    font-synthesis: none;
+    font-variant: normal;
+    font-weight: var(--fa-style, 900);
+    line-height: 1;
+    text-align: center;
+    text-rendering: auto;
+    width: var(--fa-width, 1.25em);
+    /* custom style */
+    top: 5rem;
+}
+
+#hero .swiper-button-disabled {
+    opacity: 0.3;
+}
+
+#hero .swiper-button-prev::before,
+#hero .swiper-button-next::before {
+    /* aligning with the layout */
+    font-weight: 900;
+    font-size: 3.0rem;
+    color: var(--color-white);
+}
+
+#hero .swiper-button-prev::before {
+    content: "\f104";
+}
+
+#hero .swiper-button-next::before {
+    content: "\f105";
+}
+
+#hero .swiper-pagination {
+    --swiper-pagination-bottom: 48px;
+}
