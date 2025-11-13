@@ -30,6 +30,19 @@ body {
 section {
     /* for some reason the margins do not work correctly without this */
     display: flow-root;
+    position: relative;
+    background-color: var(--background-dark-50);
+}
+
+section .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 a {
@@ -67,28 +80,21 @@ a {
     color: var(--color-white);
 }
 
-/* || Hero section */
+.text-label {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 14px;
+}
+
+/* !|| Hero section */
 #hero .navbar a {
     display: inline-block;
 }
 
 #hero {
-    position: relative;
     min-height: 850px;
     height: 100vh;
-    background-color: var(--background-dark-50);
     text-align: center;
-}
-
-#hero .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-    z-index: -1;
 }
 
 #hero .navbar {
@@ -194,4 +200,42 @@ a {
 
 #hero .swiper-pagination {
     --swiper-pagination-bottom: 48px;
+}
+
+/* !|| /Hero section */
+
+/* !|| Content section */
+#content {
+    min-height: 540px;
+    text-align: center;
+}
+
+#content .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content .text-wrapper {
+    margin-top: 10.7rem;
+    max-width: 81.5rem;
+}
+
+#content h2 {
+    font-size: 5.8rem;
+    line-height: 7rem;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    margin-top: 3.5rem;
+}
+
+#content p {
+    font-weight: 500;
+    font-size: 1.8rem;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    line-height: 2.8rem;
+    width: 77.5rem;
+    margin-bottom: 0;
+    margin-top: 2.8rem;
 }
