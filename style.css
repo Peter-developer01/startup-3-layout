@@ -8,6 +8,7 @@
     --background-dark-50: rgba(47, 24, 147, 0.5);
     --color-grey: rgba(235, 234, 237, 1);
     --color-white: rgba(255, 255, 255, 1);
+    --color-white-15: rgba(255, 255, 255, 0.15);
     --color-black: rgba(20, 20, 20, 1);
     --color-black-10: rgba(20, 20, 20, 0.1);
     --color-black-30: rgba(20, 20, 20, 0.3);
@@ -98,17 +99,28 @@ a {
     color: var(--color-white);
 }
 
-.text-label {
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 1.4rem;
-}
 
 .h3-title {
     font-size: 42px;
     line-height: 5.2rem;
     letter-spacing: -0.4px;
     margin: 0;
+}
+
+.text-label {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.4rem;
+}
+
+.text-article {
+    font-weight: 500;
+    font-size: 1.8rem;
+    mix-blend-mode: normal;
+    line-height: 2.8rem;
+    width: 77.5rem;
+    margin-bottom: 0;
+    margin-top: 2.8rem;
 }
 
 /* !|| Hero section */
@@ -254,15 +266,8 @@ a {
     margin-top: 3.5rem;
 }
 
-#content p {
-    font-weight: 500;
-    font-size: 1.8rem;
-    mix-blend-mode: normal;
+#content .text-article {
     opacity: 0.7;
-    line-height: 2.8rem;
-    width: 77.5rem;
-    margin-bottom: 0;
-    margin-top: 2.8rem;
 }
 
 /* !|| /Content section */
@@ -450,4 +455,56 @@ a {
     font-size: 1.6rem;
     line-height: 2.2rem;
     font-weight: 400;
+}
+
+/* !|| /Form section */
+
+/* !|| Testimonial section */
+#testimonial {
+    background-color: var(--color-heading);
+}
+
+#testimonial .container {
+    min-height: 800px;
+    padding-top: 10rem;
+}
+
+#testimonial .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    margin-top: 4rem;
+}
+
+#testimonial .testimonial {
+    display: flex;
+    gap: 3rem;
+    width: 47rem;
+    min-height: 23.7rem;
+    border: 2px solid var(--color-white-15);
+    border-radius: 1rem;
+    padding: 3.5rem 2.8rem 2.3rem 3.5rem;
+}
+
+#testimonial .testimonial-avatar img {
+    border-radius: 1rem;
+}
+
+#testimonial .testimonial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#testimonial .testimonial-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+    margin: 0;
+}
+
+#testimonial .testimonial-author {
+    opacity: 30%;
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
 }
