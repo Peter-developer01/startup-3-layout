@@ -161,7 +161,7 @@
 				<div class="container-fluid">
 					<img src="img/mockup.png" alt="mockup" class="left features-mockup" />
 					<div class="right">
-						<h3>We Create Something New</h3>
+						<h3 class="h3-title">We Create Something New</h3>
 						<h5>
 							We have created a new product that will help designers, developers
 							and companies create websites for their startups quickly and
@@ -210,44 +210,84 @@
 			</section>
 
 			<section id="form">
+				<img src="img/form.jpg" alt="form background" class="background" />
 				<div class="container">
-					<div class="wrapper">
-						<div class="left">
-							<h2>
-								We solve digital problems with an outstanding creative flare
-							</h2>
-							<p>
-								We have created a new product that will help designers,
-								developers and companies create websites for their startups
-								quickly and easily.
-							</p>
-						</div>
+					<div class="left">
+						<h3 class="h3-title">
+							We solve digital problems with an outstanding creative flare
+						</h3>
+						<p>
+							We have created a new product that will help designers, developers
+							and companies create websites for their startups quickly and
+							easily.
+						</p>
+					</div>
 
-						<div class="right">
-							<div class="tabs">
-								<div data-toggle="#signup" class="tab active">Sign Up</div>
-								<div data-toggle="#login" class="tab">Login</div>
+					<div class="tabs">
+						<div class="tab-headers">
+							<button
+								data-toggle="#signup"
+								class="tab-header text-label active"
+							>
+								Sign Up
+							</button>
+							<button data-toggle="#login" class="tab-header text-label">
+								Login
+							</button>
+						</div>
+						<div class="tabs-content">
+							<div id="signup" class="tab-content active">
+								<form action="#" method="POST">
+									<input
+										autocomplete="email"
+										name="email"
+										type="email"
+										placeholder="Your email"
+										class="form-input"
+										required
+									/>
+									<input
+										autocomplete="current-password"
+										name="password"
+										type="password"
+										placeholder="Your password"
+										class="form-input"
+										required
+									/>
+									<button type="submit" class="btn btn-primary">
+										Create an Account
+									</button>
+									<div class="hr-text">
+										<div class="hr"></div>
+										<span>or</span>
+										<div class="hr"></div>
+									</div>
+									<!-- Twitter not Twitter, X not X, Twitter not X, X not Twitter, I do not care. -->
+									<button class="btn btn-socials-twitter" type="button">
+										Login via Twitter
+									</button>
+								</form>
 							</div>
-							<div class="tabs-content">
-								<div id="signup" class="tab-content active">
-									<form action="#">
-										<input type="email" placeholder="Your email" />
-										<input type="password" placeholder="Your password" />
-										<button type="submit">Create an Account</button>
-										<div class="hr-text">
-											<div class="hr"></div>
-											<span>or</span>
-											<div class="hr"></div>
-										</div>
-										<!-- Twitter not Twitter, X not X, Twitter not X, X not Twitter, I do not care. -->
-										<button>Login via Twitter</button>
-									</form>
-								</div>
-								<div id="login" class="tab-content">
-									<input type="email" placeholder="Email" />
-									<input type="password" placeholder="Password" />
-									<button>Login</button>
-								</div>
+							<div id="login" class="tab-content">
+								<form action="#" method="POST">
+									<input
+										autocomplete="email"
+										name="email"
+										type="email"
+										placeholder="Your email"
+										class="form-input"
+										required
+									/>
+									<input
+										autocomplete="new-password"
+										name="password"
+										type="password"
+										placeholder="Your password"
+										class="form-input"
+										required
+									/>
+									<button type="submit" class="btn btn-primary">Login</button>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -808,5 +848,6 @@
 		</footer>
 
 		<script type="module" src="init-swiper.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>

@@ -4,10 +4,18 @@
 }
 
 :root {
-    --background-dark: rgb(47, 24, 147);
+    --background-dark: rgba(47, 24, 147, 1);
     --background-dark-50: rgba(47, 24, 147, 0.5);
+    --color-grey: rgba(235, 234, 237, 1);
     --color-white: rgba(255, 255, 255, 1);
+    --color-black: rgba(20, 20, 20, 1);
+    --color-black-10: rgba(20, 20, 20, 0.1);
+    --color-black-30: rgba(20, 20, 20, 0.3);
+    --color-text: rgba(21, 20, 57, 0.4);
+    --color-heading: rgba(30, 14, 98, 1);
+    --action-primary: rgba(37, 218, 197, 1);
     --action-secondary: rgba(72, 43, 231, 1);
+    --socials-twitter: rgba(29, 161, 242, 1);
     --font: "DM Sans", Roboto, sans-serif;
     /* animate.css variable settings */
     --animate-duration: 1s;
@@ -64,15 +72,20 @@ a {
     border: none;
     border-radius: 10rem;
     cursor: pointer;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
 }
 
 .btn:hover {
-    filter: brightness(1.2);
+    filter: brightness(0.9);
 }
 
 .btn:active {
-    filter: brightness(0.9);
+    filter: brightness(1);
+}
+
+.btn-primary {
+    background-color: var(--action-primary);
+    color: var(--color-white);
 }
 
 .btn-secondary {
@@ -80,10 +93,22 @@ a {
     color: var(--color-white);
 }
 
+.btn-socials-twitter {
+    background-color: var(--socials-twitter);
+    color: var(--color-white);
+}
+
 .text-label {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-size: 1.4rem;
+}
+
+.h3-title {
+    font-size: 42px;
+    line-height: 5.2rem;
+    letter-spacing: -0.4px;
+    margin: 0;
 }
 
 /* !|| Hero section */
@@ -270,13 +295,6 @@ a {
     margin-left: 5.2rem;
 }
 
-#features h3 {
-    font-size: 42px;
-    line-height: 5.2rem;
-    letter-spacing: -0.4px;
-    margin: 0;
-}
-
 #features h5 {
     font-weight: 500;
     font-size: 2.2rem;
@@ -308,3 +326,128 @@ a {
 }
 
 /* !|| /Features section */
+
+/* !|| Form section */
+#form {
+    display: flex;
+    min-height: 750px;
+}
+
+#form .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13rem;
+}
+
+#form .left {
+    max-width: 36.9rem;
+    max-height: 42rem;
+}
+
+#form p {
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-top: 3.2rem;
+}
+
+#form .tabs {
+    display: flex;
+    flex-direction: column;
+    width: 47rem;
+    height: 55rem;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+}
+
+#form .tab-headers {
+    display: flex;
+    justify-content: space-evenly;
+    height: 7.1rem;
+}
+
+#form .tab-header {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: var(--color-text);
+    border: none;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--color-grey);
+    background: none;
+    flex-grow: 1;
+    font-weight: 700;
+    padding-top: 2.5rem;
+    padding-bottom: 1.7rem;
+}
+
+#form .tabs-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#form .tab-header.active {
+    color: var(--color-heading);
+    border-bottom-color: var(--color-heading);
+}
+
+#form .tab-header:hover {
+    color: var(--color-heading);
+}
+
+#form .tab-content {
+    display: none;
+    flex-grow: 1;
+    padding: 6.9rem 6.9rem 7.9rem 7rem;
+}
+
+#form .tab-content.active {
+    display: flex;
+}
+
+#form .btn,
+#form .form-input {
+    height: 5rem;
+    width: 100%;
+}
+
+#form .btn {
+    padding: 0 1.2rem;
+}
+
+#form .btn:first-of-type {
+    margin-top: 4rem;
+}
+
+#form .form-input {
+    border: 0.2rem solid var(--color-grey);
+    border-radius: 10rem;
+    font-size: 1.8rem;
+    padding: 0 2.4rem;
+}
+
+#form .form-input+.form-input {
+    margin-top: 3rem;
+}
+
+#form .hr-text {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    color: var(--color-black-30);
+}
+
+#form .hr-text .hr {
+    flex-grow: 1;
+    height: 0.2rem;
+    background-color: var(--color-black-30);
+}
+
+#form .hr-text span {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+}
