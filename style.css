@@ -26,8 +26,8 @@
 }
 
 html {
-    /* The font size is 10 px to make it easier to make the layout responsive.  */
-    font-size: 10px;
+    /* The font size is 62.5 (10 px) to make it easier to make the layout responsive.  */
+    font-size: 62.5%;
 }
 
 body {
@@ -143,6 +143,12 @@ a {
     width: 77.5rem;
     margin-bottom: 0;
     margin-top: 2.8rem;
+}
+
+.text-paragraph {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
 }
 
 .justify-content-space-between {
@@ -347,9 +353,6 @@ a {
 }
 
 #features .feature-description {
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
     margin: 0;
     margin-top: 1.6rem;
 }
@@ -375,9 +378,6 @@ a {
 }
 
 #form p {
-    font-weight: normal;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
     margin-top: 3.2rem;
 }
 
@@ -627,4 +627,43 @@ a {
 #showcase .work-name {
     margin-top: 0.3rem;
     margin-bottom: 0;
+}
+
+/* !|| /Showcase section */
+
+/* !|| Team section */
+#team {
+    background-color: var(--background-dark);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#team .h5-lead:first-of-type {
+    margin-top: 3.1rem;
+}
+
+#team .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15.7rem 6rem;
+    margin-top: 5rem;
+}
+
+#team .person-name {
+    margin: 0;
+}
+
+#team .person-profession {
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+}
+
+#team .person-socials {
+    display: flex;
+    gap: 3.5rem;
+}
+
+#team .person-social {
+    font-size: 1.8rem;
+    margin-top: 2rem;
 }
