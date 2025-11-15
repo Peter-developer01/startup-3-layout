@@ -17,6 +17,7 @@
     --action-primary: rgba(37, 218, 197, 1);
     --action-secondary: rgba(72, 43, 231, 1);
     --socials-twitter: rgba(29, 161, 242, 1);
+    --socials-youtube: rgba(234, 50, 35, 1);
     --font: "DM Sans", Roboto, sans-serif;
     /* animate.css variable settings */
     --animate-duration: 1s;
@@ -63,10 +64,9 @@ a {
 }
 
 .btn {
+    display: inline-block;
     border-radius: 1.6rem;
     padding: 1.6rem 2.4rem;
-    min-width: 23.0rem;
-    height: 6.0rem;
     font-size: 1.8rem;
     line-height: 2.6rem;
     font-weight: bold;
@@ -74,6 +74,7 @@ a {
     border-radius: 10rem;
     cursor: pointer;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+    color: var(--color-white);
 }
 
 .btn:hover {
@@ -86,19 +87,29 @@ a {
 
 .btn-primary {
     background-color: var(--action-primary);
-    color: var(--color-white);
 }
 
 .btn-secondary {
     background-color: var(--action-secondary);
-    color: var(--color-white);
 }
 
 .btn-socials-twitter {
     background-color: var(--socials-twitter);
-    color: var(--color-white);
 }
 
+.btn-socials-youtube {
+    background-color: var(--socials-youtube);
+    border-radius: 100rem;
+    min-width: 7rem;
+    width: 7rem;
+    height: 7rem;
+}
+
+.h2-header {
+    font-size: 5.8rem;
+    line-height: 7rem;
+    letter-spacing: -1px;
+}
 
 .h3-title {
     font-size: 42px;
@@ -239,6 +250,10 @@ a {
     --swiper-pagination-bottom: 48px;
 }
 
+#hero .btn {
+    min-width: 23rem;
+}
+
 /* !|| /Hero section */
 
 /* !|| Content section */
@@ -259,9 +274,6 @@ a {
 }
 
 #content h2 {
-    font-size: 5.8rem;
-    line-height: 7rem;
-    letter-spacing: -1px;
     margin-bottom: 0;
     margin-top: 3.5rem;
 }
@@ -507,4 +519,58 @@ a {
     opacity: 30%;
     font-size: 1.4rem;
     letter-spacing: 0.2rem;
+}
+
+/* !|| /Testimonial section */
+
+/* !|| Call to Action section */
+#call-to-action {
+    text-align: center;
+}
+
+#call-to-action .background {
+    opacity: 0.7;
+}
+
+#call-to-action .container {
+    height: 605px;
+    display: flex;
+}
+
+#call-to-action .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#call-to-action h2 {
+    margin: 0;
+}
+
+#call-to-action h5 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 3.2rem;
+    margin-top: 2rem;
+}
+
+#call-to-action .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#call-to-action .btn {
+    height: 7rem;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+}
+
+#call-to-action .btn:not(.btn-socials-youtube) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-weight: 500;
+    font-size: 2rem;
 }
