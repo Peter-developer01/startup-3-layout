@@ -644,33 +644,44 @@
 			</section>
 
 			<section id="contact">
+				<!-- opacity 0.6 -->
+				<img
+					src="img/contact.jpg"
+					alt="content background"
+					class="background"
+				/>
 				<div class="container">
-					<div class="justify-content-space-between">
+					<div class="justify-content-center">
 						<div class="left">
-							<h2>Let's Keep in Touch</h2>
-							<p>
+							<h3 class="h3-title">Let's Keep in Touch</h3>
+							<h5 class="h5-lead">
 								We have created a new product that will help designers,
 								developers and companies create websites for their startups
 								quickly and easily.
-							</p>
+							</h5>
 							<div class="contacts">
 								<div class="contact">
 									<span class="contact-icon">
 										<i class="fa-solid fa-phone"></i>
 									</span>
-									<a href="tel:+15555055050">+1 555 505 5050</a>
+									<a class="text-paragraph" href="tel:+15555055050">
+										+1 555 505 5050
+									</a>
 								</div>
 								<div class="contact">
 									<span class="contact-icon">
 										<i class="fa-solid fa-envelope"></i>
 									</span>
-									<a href="email:info@designmodo.com">info@designmodo.com</a>
+									<a class="text-paragraph" href="email:info@designmodo.com">
+										info@designmodo.com
+									</a>
 								</div>
 								<div class="contact">
 									<span class="contact-icon">
+										<!-- This icon was named fa-building-o in the layout and it had 5 floors, but there is no such icon in the current version of Font Awesome -->
 										<i class="fa-solid fa-building"></i>
 									</span>
-									<address>
+									<address class="text-paragraph">
 										San Francisco, CA560 Bush St & 20th Ave, Apt5 San Francisco,
 										230909
 									</address>
@@ -679,62 +690,92 @@
 						</div>
 
 						<div class="right">
-							<form action="#">
+							<form class="contact-form" action="#">
 								<div class="justify-content-space-between">
 									<div class="form-input-labelled">
-										<label for="firstName" class="form-input-label"
-											>Your name</label
-										>
+										<label for="firstName" class="form-input-label text-label">
+											Your name
+										</label>
 										<input
 											name="firstName"
 											id="firstName"
 											type="text"
 											maxlength="100"
-											class="form-input"
+											class="form-input w-20rem"
 											placeholder="First name"
+											required
 										/>
 									</div>
 									<div class="form-input-labelled">
-										<span class="form-input-label">Budget</span>
-										<!-- TODO make something like a select, but that you can also type in there. For example, from $0 to $5000 -->
+										<span class="form-input-label text-label">Budget</span>
+										<input
+											name="budget"
+											id="budget"
+											list="budget-list"
+											type="text"
+											class="form-input w-14rem"
+											value="$500"
+											placeholder="Enter your budget"
+										/>
+										<datalist id="budget-list">
+											<option value="$10"></option>
+											<option value="$50"></option>
+											<option value="$100"></option>
+											<option value="$500"></option>
+											<option value="$1000"></option>
+										</datalist>
 									</div>
 								</div>
 								<div class="form-input-labelled">
 									<!-- ? I don't know why the layout has such a weird label. -->
-									<label for="email" class="form-input-label">
+									<label for="email" class="form-input-label text-label">
 										Input field
 									</label>
 									<input
 										id="email"
 										name="email"
 										type="email"
+										maxlength="100"
+										class="form-input"
 										placeholder="name@mail.com"
+										required
 									/>
 								</div>
 								<div class="form-input-labelled">
-									<label for="message" class="form-input-label">
+									<label for="message" class="form-input-label text-label">
 										Your message
 									</label>
 									<textarea
 										name="message"
 										id="message"
+										maxlength="5000"
+										class="form-input form-textarea"
 										placeholder="Message"
+										required
 									></textarea>
 								</div>
-								<div class="justify-content-space-between">
-									<div>
+								<div
+									class="form-bottom justify-content-space-between align-items-center"
+								>
+									<div class="form-check-labelled">
 										<input
 											type="checkbox"
 											name="sendCopy"
 											id="sendCopy"
+											class="form-check"
 											checked
 										/>
-										<label for="sendCopy" class="form-check-label">
+										<label
+											for="sendCopy"
+											class="form-check-label text-paragraph"
+										>
 											Send me a copy
 										</label>
 									</div>
 									<div>
-										<button type="submit">Send</button>
+										<button class="btn btn-primary form-submit" type="submit">
+											Send
+										</button>
 									</div>
 								</div>
 							</form>

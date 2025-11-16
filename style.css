@@ -156,6 +156,34 @@ a {
     justify-content: space-between;
 }
 
+.justify-content-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.justify-content-space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.justify-content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+.w-14rem {
+    width: 14rem;
+}
+
+.w-20rem {
+    width: 20rem;
+}
+
 /* !|| Hero section */
 #hero .navbar a {
     display: inline-block;
@@ -666,4 +694,110 @@ a {
 #team .person-social {
     font-size: 1.8rem;
     margin-top: 2rem;
+}
+
+/* !|| /Team section */
+
+/* !|| Contact section */
+#contact {
+    height: 770px;
+    padding-top: 15rem;
+}
+
+#contact .container>div {
+    gap: 6.9rem;
+}
+
+#contact .background {
+    opacity: 0.6;
+}
+
+#contact .left {
+    max-width: 41rem;
+}
+
+#contact .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 4.4rem;
+}
+
+#contact .contact-icon {
+    font-size: 1.8rem;
+    margin-right: 1.35rem;
+}
+
+#contact address {
+    display: inline;
+    font-style: normal;
+}
+
+#contact .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    background-color: var(--color-white);
+    color: var(--color-heading);
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    width: 47rem;
+    height: 57rem;
+    padding: 5.8rem 5rem 5.6rem 5rem;
+}
+
+#contact .form-input-labelled {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+#contact .form-input {
+    color: var(--color-heading);
+    border: 0.2rem solid var(--color-grey);
+    border-radius: 10rem;
+    font-size: 1.8rem;
+    padding: 1.2rem 2.4rem;
+}
+
+#contact .form-input::-webkit-calendar-picker-indicator {
+    /* This is a dirty hack to make the budget picket dropdown's arrow always visible... */
+    opacity: 1;
+    color: var(--color-heading)
+}
+
+#contact .form-input::placeholder {
+    color: var(--color-text);
+}
+
+#contact .form-textarea {
+    border-radius: 1rem;
+    resize: vertical;
+    padding: 1.3rem 1.9rem;
+}
+
+#contact .form-bottom {
+    margin-top: calc(3rem - 3.5rem);
+}
+
+#contact .form-check-labelled {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+#contact .form-check {
+    accent-color: var(--action-primary);
+    width: 2rem;
+    height: 2rem;
+}
+
+#contact .form-check-label {
+    color: var(--color-text)
+}
+
+#contact .form-submit {
+    width: 12rem;
+    height: 5rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
 }
