@@ -760,7 +760,7 @@ a {
 }
 
 #contact .form-input::-webkit-calendar-picker-indicator {
-    /* This is a dirty hack to make the budget picket dropdown's arrow always visible... */
+    /* This is a dirty hack to make the budget picker dropdown's arrow always visible... */
     opacity: 1;
     color: var(--color-heading)
 }
